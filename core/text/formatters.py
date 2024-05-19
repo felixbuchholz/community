@@ -154,6 +154,10 @@ formatters_dict = {
     ),
     "DOUBLE_COLON_SEPARATED": words_with_joiner("::"),
     "ALL_CAPS": (SEP, every_word(lambda w: w.upper())),
+    "CONSTANT_CASE": (
+        NOSEP,
+        first_vs_rest(lambda w: w.upper(), lambda w: "_" + w.upper()),
+    ),
     "ALL_LOWERCASE": (SEP, every_word(lambda w: w.lower())),
     "DOUBLE_QUOTED_STRING": (SEP, surround('"')),
     "SINGLE_QUOTED_STRING": (SEP, surround("'")),
@@ -172,13 +176,14 @@ formatters_dict = {
 # Mapping from spoken phrases to formatter names
 code_formatter_names = {
     "all cap": "ALL_CAPS",
+    "constant": "CONSTANT_CASE",
     "all down": "ALL_LOWERCASE",
     "camel": "PRIVATE_CAMEL_CASE",
     "dotted": "DOT_SEPARATED",
     "dub string": "DOUBLE_QUOTED_STRING",
     "dunder": "DOUBLE_UNDERSCORE",
     "hammer": "PUBLIC_CAMEL_CASE",
-    "kebab": "DASH_SEPARATED",
+    "dashing": "DASH_SEPARATED",
     "packed": "DOUBLE_COLON_SEPARATED",
     "padded": "SPACE_SURROUNDED_STRING",
     "slasher": "ALL_SLASHES",

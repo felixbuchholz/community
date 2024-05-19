@@ -10,8 +10,8 @@ next one: edit.find_next()
 # Navigation
 
 # The reason for these spoken forms is that "page up" and "page down" are globally defined as keys.
-scroll up: edit.page_up()
-scroll down: edit.page_down()
+unscroll: edit.page_up()
+scroll: edit.page_down()
 
 go word left: edit.word_left()
 go word right: edit.word_right()
@@ -104,7 +104,7 @@ clear way down:
     edit.delete()
 
 # Copy
-copy that: edit.copy()
+copy: edit.copy()
 copy all: user.copy_all()
 copy line: user.copy_line()
 copy line start: user.copy_line_start()
@@ -128,7 +128,7 @@ copy word right: user.copy_word_right()
 #     edit.copy()
 
 # Cut
-cut that: edit.cut()
+cutty: edit.cut()
 cut all: user.cut_all()
 cut line: user.cut_line()
 cut line start: user.cut_line_start()
@@ -152,16 +152,16 @@ cut word right: user.cut_word_right()
 #     edit.cut()
 
 # Paste
-(pace | paste) that: edit.paste()
-(pace | paste) enter:
+pasty: edit.paste()
+pasty enter:
     edit.paste()
     key(enter)
-paste match: edit.paste_match_style()
-(pace | paste) all: user.paste_all()
-(pace | paste) line: user.paste_line()
-(pace | paste) line start: user.paste_line_start()
-(pace | paste) line end: user.paste_line_end()
-(pace | paste) word: user.paste_word()
+pasty match: edit.paste_match_style()
+pasty all: user.paste_all()
+pasty line: user.paste_line()
+pasty line start: user.paste_line_start()
+pasty line end: user.paste_line_end()
+pasty word: user.paste_word()
 
 # Duplication
 clone that: edit.selection_clone()
@@ -179,8 +179,8 @@ new line below | slap: edit.line_insert_down()
     insert(" ")
 
 # Undo/redo
-undo that: edit.undo()
-redo that: edit.redo()
+undoing: edit.undo()
+redoing: edit.redo()
 
 # Save
 file save: edit.save()
