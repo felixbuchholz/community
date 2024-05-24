@@ -196,7 +196,7 @@ symbol_key_words = {
     "underscore": "_",
     "paren": "(",
     "brace": "{",
-    "race": "}",
+    "rebrace": "}",
     "right brace": "}",
     "angle": "<",
     "left angle": "<",

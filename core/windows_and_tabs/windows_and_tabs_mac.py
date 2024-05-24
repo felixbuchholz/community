@@ -30,7 +30,7 @@ class AppActions:
         actions.key("cmd-w")
 
     def window_hide():
-        actions.key("cmd-m")
+        actions.key("cmd-h")
 
     def window_hide_others():
         actions.key("cmd-alt-h")
